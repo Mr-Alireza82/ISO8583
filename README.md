@@ -12,7 +12,7 @@ A lightweight [ISO8583](https://en.wikipedia.org/wiki/ISO_8583) message packer a
 ## 🚀 Getting Started
 
 ### Installation
-
+Library is available at Maven Centeral so you can add this dependency to your build.gradle.kts (Module: app) like below:
 ```kotlin
 // Gradle
 implementation("com.yourorg:iso8583:1.0.0")
