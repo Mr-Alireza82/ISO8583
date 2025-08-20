@@ -1,6 +1,6 @@
 # ISO8583 Kotlin Packer/Unpacker
 
-A lightweight ISO8583 (See the [ISO8583 Specification](https://en.wikipedia.org/wiki/ISO_8583) for more details.) message packer and unpacker implemented in Kotlin using the Builder Pattern.
+A lightweight [ISO8583](https://en.wikipedia.org/wiki/ISO_8583) message packer and unpacker implemented in Kotlin using the Builder Pattern.
 
 ## ✨ Features
 
