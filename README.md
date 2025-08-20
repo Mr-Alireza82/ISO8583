@@ -10,13 +10,36 @@ A lightweight [ISO8583](https://en.wikipedia.org/wiki/ISO_8583) message packer a
 - ✅ Supporting [MTLS](https://en.wikipedia.org/wiki/Mutual_authentication)
 - ✅ Supporting Asynchronous Non-Blocking IO
 
+## 🏗️ Architecture Overview
+
+This library separates responsibilities into three clear layers:
+
+1. **Client Logic**  
+   Handles TCP connections, message sending, retries, and response reading.  
+   The client is responsible for transporting the message over the network.
+
+2. **Builder Logic**  
+   Uses the Builder Pattern to fluently construct ISO8583 messages.  
+   The builder itself stays generic, but its values depend on the chosen protocol.
+
+3. **Protocol Logic**  
+   Defines the rules and templates for a specific ISO8583 protocol version (e.g., 1987/1993/2003).  
+   Each protocol can provide its own builder configuration.  
+   - Same builder structure  
+   - Different field definitions and values  
+
+This separation allows you to:  
+- Reuse the **Client** for networking without touching message construction.  
+- Swap out **Protocol Logic** while keeping the same **Builder** interface.  
+- Maintain clean, extensible, and testable code.
+
 ## 🚀 Getting Started
 
 ### Installation
 Library is available at Maven Centeral so you can add this dependency to your build.gradle.kts (Module: app) like below:
 ```kotlin
 // Gradle
-implementation("com.yourorg:iso8583:1.0.0")
+implementation("com.iso:iso8583:1.0.0")
 ```
 
 ## ⚡ Usage Example
