@@ -10,6 +10,9 @@ A lightweight [ISO8583](https://en.wikipedia.org/wiki/ISO_8583) message packer a
 - ✅ Supporting [MTLS](https://en.wikipedia.org/wiki/Mutual_authentication)
 - ✅ Supporting Asynchronous Non-Blocking IO
 
+
+
+
 ## 🏗️ Architecture Overview
 
 This library separates responsibilities into three clear layers:
