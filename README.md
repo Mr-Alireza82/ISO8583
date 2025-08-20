@@ -22,7 +22,7 @@ This library separates responsibilities into three clear layers:
    Uses the Builder Pattern to fluently construct ISO8583 messages.  
    The message itself stays generic, but its values depend on the chosen protocol.
 
-3. **Protocol Logic**
+3. **Protocol Logic**  
    Defines the rules and templates for a specific ISO8583 protocol.
    Each protocol can provide its own builder configuration.  
 
