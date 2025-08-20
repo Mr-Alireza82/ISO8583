@@ -18,9 +18,9 @@ This library separates responsibilities into three clear layers:
    Handles TCP connections, message sending, retries, and response reading.  
    The client is responsible for transporting the message over the network.
 
-2. **Builder Logic**  
+2. **Message Logic**  
    Uses the Builder Pattern to fluently construct ISO8583 messages.  
-   The builder itself stays generic, but its values depend on the chosen protocol.
+   The message itself stays generic, but its values depend on the chosen protocol.
 
 3. **Protocol Logic**  
    Defines the rules and templates for a specific ISO8583 protocol version (e.g., 1987/1993/2003).  
