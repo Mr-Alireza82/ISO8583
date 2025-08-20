@@ -8,6 +8,8 @@ A lightweight [ISO8583](https://en.wikipedia.org/wiki/ISO_8583) message packer a
 - ✅ Customizable field templates
 - ✅ Builder pattern for fluent APIs
 - ✅ Supports both ASCII and binary messages
+- ✅ Supporting [MTLS](https://en.wikipedia.org/wiki/Mutual_authentication)
+- ✅ Supporting Asynchronous Non-Blocking IO
 
 ## 🚀 Getting Started
 
