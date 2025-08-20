@@ -10,26 +10,35 @@ A lightweight [ISO8583](https://en.wikipedia.org/wiki/ISO_8583) message packer a
 - ✅ Supporting [MTLS](https://en.wikipedia.org/wiki/Mutual_authentication)
 - ✅ Supporting Asynchronous Non-Blocking IO
 
+<br><br>
+
 ## 🏗️ Architecture Overview
 
-This library separates responsibilities into three clear layers:
+This library is designed with a **clean separation of responsibilities**, making it modular and easy to extend.  
+It consists of three core layers:
 
-1. **Client Logic**  
-   Handles TCP connections, message sending, retries, and response reading.  
-   The client is responsible for transporting the message over the network.  
+### 1️⃣ Client Logic
+🔌 Handles TCP connections, retries, and response reading.  
+The client is only responsible for **transporting the message** across the network.  
 
-2. **Message Logic**  
-   Uses the Builder Pattern to fluently construct ISO8583 messages.  
-   The message itself stays generic, but its values depend on the chosen protocol.  
+### 2️⃣ Message Logic
+🧱 Uses the **Builder Pattern** to fluently construct ISO8583 messages.  
+The message structure is generic, but its **values and fields** are determined by the protocol.  
 
-3. **Protocol Logic**  
-   Defines the rules and templates for a specific ISO8583 protocol.  
-   Each protocol can provide its own builder configuration.  
+### 3️⃣ Protocol Logic
+📜 Defines the **rules and templates** for the ISO8583 protocol version in use.  
+Each protocol provides its own builder configuration.  
+- Same builder structure  
+- Different field definitions and values  
 
-This separation allows you to:  
-- Reuse the **Client** for networking without touching message construction.  
-- Swap out **Protocol Logic** while keeping the same **Builder** interface.  
-- Maintain clean, extensible, and testable code.
+---
+
+✅ **This separation allows you to:**  
+- Reuse the **Client** for networking without touching message construction  
+- Swap out **Protocol Logic** while keeping the same **Message** interface  
+- Maintain **clean, extensible, and testable** code  
+
+<br><br>
 
 ## 🚀 Getting Started
 
