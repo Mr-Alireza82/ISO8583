@@ -10,7 +10,7 @@ A lightweight [ISO8583](https://en.wikipedia.org/wiki/ISO_8583) message packer a
 - ✅ Supporting [MTLS](https://en.wikipedia.org/wiki/Mutual_authentication)
 - ✅ Supporting Asynchronous Non-Blocking IO
 
-<br><br>
+<br>
 
 ## 🏗️ Architecture Overview
 
@@ -38,7 +38,7 @@ Each protocol provides its own builder configuration.
 - Swap out **Protocol Logic** while keeping the same **Message** interface  
 - Maintain **clean, extensible, and testable** code  
 
-<br><br>
+<br>
 
 ## 🚀 Getting Started
 
