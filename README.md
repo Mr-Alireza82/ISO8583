@@ -9,8 +9,7 @@ A lightweight [ISO8583](https://en.wikipedia.org/wiki/ISO_8583) message packer a
 - ✅ Builder pattern for fluent APIs
 - ✅ Supporting [MTLS](https://en.wikipedia.org/wiki/Mutual_authentication)
 - ✅ Supporting Asynchronous Non-Blocking IO
-/n
-/n
+
 ## 🏗️ Architecture Overview
 
 This library separates responsibilities into three clear layers:
